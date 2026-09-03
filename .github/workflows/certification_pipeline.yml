@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install jsonschema pytest
+          pip install jsonschema PYTHONPATH=. pytest
       - name: Run Validation and Test Suites
         run: |
-          pytest
+          PYTHONPATH=. pytest
