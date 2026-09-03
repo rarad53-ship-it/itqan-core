@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ITQAN_CMR",
+  "version": "1.0.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "verification_status",
+    "reconstruction_status",
+    "preservation_constraints",
+    "semantic_math_ast"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "verification_status": { "type": "string", "const": "VALIDATED" },
+    "reconstruction_status": { "type": "string", "const": "RESTRUCTION_COMPLETE" },
+    "preservation_constraints": { "type": "object" },
+    "semantic_math_ast": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "not": { "const": "CANDIDATE_NODE" } }
+      },
+      "additionalProperties": true
+    }
+  }
+}

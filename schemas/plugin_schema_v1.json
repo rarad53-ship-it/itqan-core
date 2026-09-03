@@ -1,0 +1,64 @@
+{
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://itqan.core/schemas/plugin_schema_v1.json",
+          "title": "ItqanPluginManifest",
+            "type": "object",
+              "required": ["plugin_id", "version", "entry_point", "capabilities"],
+                "properties": {
+                    "plugin_id": {
+                          "type": "string",
+                                "pattern": "^[a-z0-9_\\-]+$"
+                                    },
+                                        "version": {
+                                              "type": "string",
+                                                    "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
+                                                        },
+                                                            "entry_point": {
+                                                                  "type": "string"
+                                                                      },
+                                                                          "capabilities": {
+                                                                                "type": "array",
+                                                                                      "items": {
+                                                                                              "type": "string"
+                                                                                                    },
+                                                                                                          "uniqueItems": true
+                                                                                                              }
+                                                                                                                },
+                                                                                                                  "additionalProperties": false
+                                                                                          {
+                                                                                              "$schema": "https://json-schema.org/draft/2020-12/schema",
+                                                                                                "$id": "https://itqan.core/schemas/registry_schema_v1.json",
+                                                                                                  "title": "ItqanRegistryIndex",
+                                                                                                    "type": "object",
+                                                                                                      "required": ["registry_version", "plugins"],
+                                                                                                        "properties": {
+                                                                                                            "registry_version": {
+                                                                                                                  "type": "string"
+                                                                                                                      },
+                                                                                                                          "plugins": {
+                                                                                                                                "type": "array",
+                                                                                                                                      "items": {
+                                                                                                                                              "type": "object",
+                                                                                                                                                      "required": ["plugin_id", "version", "hash_sha256"],
+                                                                                                                                                              "properties": {
+                                                                                                                                                                        "plugin_id": {
+                                                                                                                                                                                    "type": "string"
+                                                                                                                                                                                              },
+                                                                                                                                                                                                        "version": {
+                                                                                                                                                                                                                    "type": "string"
+                                                                                                                                                                                                                              },
+                                                                                                                                                                                                                                        "hash_sha256": {
+                                                                                                                                                                                                                                                    "type": "string",
+                                                                                                                                                                                                                                                                "pattern": "^[a-fA-F0-9]{64}$"
+                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                  },
+                                                                                                                                                                                                                                                                                          "additionalProperties": false
+                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                      },
+                                                                                                                                                                                                                                                                                                        "additionalProperties": false
+                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                        
+                                                                                          }                        }
+
+}

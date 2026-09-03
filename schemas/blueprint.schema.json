@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ITQAN_BLUEPRINT",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["blueprint_id", "pedagogical_strategy", "difficulty"],
+  "properties": {
+    "blueprint_id": { "type": "string" },
+    "pedagogical_strategy": { "type": "string" },
+    "difficulty": { "type": "string" }
+  }
+}

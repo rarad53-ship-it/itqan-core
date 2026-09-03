@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ITQAN_QUESTION",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["question_id", "cmr_binding", "correct_answer", "distractors"],
+  "properties": {
+    "question_id": { "type": "string" },
+    "cmr_binding": { "type": "object" },
+    "correct_answer": { "type": "object" },
+    "distractors": { "type": "array" }
+  }
+}

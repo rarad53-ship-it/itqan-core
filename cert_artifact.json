@@ -1,0 +1,16 @@
+{
+  "artifact": {
+    "certification_status": "ITQAN-v1.0-CERTIFIED",
+    "gates_passed": [
+      "CMR",
+      "DQSE",
+      "DDE",
+      "QUESTION",
+      "CI/CD"
+    ],
+    "implementation_verification": "PASSED",
+    "project": "ITQAN-Core",
+    "version": "1.0.0"
+  },
+  "canonical_sha256": "db58cc3f9dbff4e62e4c6c04f888582244ea3350795ab840129c7b685ede9d02"
+}
